@@ -1,0 +1,32 @@
+$ sestatus - kontrola, zda-li je selinux zapnutý 
+
+[bash ~]$ sestatus 
+SELInux status:             enabled
+SELInuxfs mount:            /sys/fs/selinux
+SELInux root dlrectory:     /etc/selinux
+Loaded policy name:         targeted
+Current mode:               enforcing
+Mode from conflg file:      enforcing
+Policy MLS status:          enabled 
+Policy deny unknown status: allowed 
+Max kernel policy version:  22
+[bash ~]$
+
+Permanentí zakázání selinuxu
+
+#This file controls the state of SELinus on the system.
+#SELINUX= can take one of these three values. 
+#   enforcing - SELinux security policy is enforced. 
+#   permissive - SELinux prints warnings instead of enforcing. 
+#   disabled - No SELinux policy is loaded. 
+SELINUX=enforcing --> změniť na  SELinux=disabled !!!
+#SELINUXTYPE= can take one of than two values.
+#   targeted - Targeted processes are protected. 
+#   minimum - Modification of targeted policy. Only selected processes are protected.
+#   mls - Multi Level Security protection.
+SELINUXTYPE=targeted 
+
+-> kontrola:
+[bash ~]$ sestatus 
+SELInux status:             disabled
+[bash ~]$
