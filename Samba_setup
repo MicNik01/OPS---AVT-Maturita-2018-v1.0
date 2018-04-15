@@ -17,7 +17,7 @@ vi /etc/samba/smb.conf
         - odkomentovat doamin logon = yes
         - odkomentovat add user script = 
         - odkomentovat add group script =
-        - odkomentovat machine script = 
+        - odkomentovat add machine script = 
         - odkomentovat delete user script = 
         - odkomentovat delete user from group script =
         - odkomentovat delete group script = 
