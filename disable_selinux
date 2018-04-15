@@ -14,7 +14,7 @@ Max kernel policy version:  22
 
 Permanentí zakázání selinuxu
 
-#This file controls the state of SELinus on the system.
+#This file controls the state of SELinux on the system.
 #SELINUX= can take one of these three values. 
 #   enforcing - SELinux security policy is enforced. 
 #   permissive - SELinux prints warnings instead of enforcing. 
