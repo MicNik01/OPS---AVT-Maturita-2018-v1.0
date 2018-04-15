@@ -1,0 +1,21 @@
+#připojení jako WISP client
+- nastavení IP a DHCP rozsahu
+-> interfaces - wlan 1 - disabled 
+-> bridge - ports - wlan1 - remove 
+-> interfaces - wlan1 - enable
+-> scan 
+ -> připojit k ISP (FM-U149) 
+ -> Security profiles 
+ 
+ SECURITY PROFILES
+ -> dynamic keys
+    - povolit wpa2 psk, TKIP
+    - nastavit heslo 
+ 
+ IP 
+ -> DHCP Client -> interface wlan1
+ -> DHCP Server -> interface bridge 
+ 
+ Firewall 
+ -> odstranit NAT bez ether1
+ -> u druhého NATu - out interface = wlan1 
