@@ -35,9 +35,9 @@ Client
   => ctrl + alt + delete 
   => možnosti - přihlásit k SAMBANET => změnit poslední řádku (uživatel root + heslo)
   
-  CENTOS 
+CENTOS 
   => přidat uživatele Karel
      smbpassswd -a Karel 
      
- Client 
+Client 
  => přihlásit uživatele Karel
