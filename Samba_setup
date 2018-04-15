@@ -1,0 +1,43 @@
+Centos
+vi /etc/sysconfig/network 
+yum install samba -y
+setup -> systémové služby -> povolit nmb a smb
+ve /etc/samba/smb.conf
+  => v sekci network related options
+        - workgroup = SAMBA
+        - odkomentovat interfaces = lo eth
+        - odkomentovat hosts allow = 127. 172.16.8.
+  => v sekci standalone server options 
+        - zakomentovat security = user 
+        - zakomentovat passdb backend = tdbsam
+  => v sekci domain controller options
+        - odkomentovat security = user 
+        - odkomentovat passdb backend = tdbsam
+        - odkomentovat domain master = yes 
+        - odkomentovat doamin logon = yes
+        - odkomentovat add user script = 
+        - odkomentovat add group script =
+        - odkomentovat machine script = 
+        - odkomentovat delete user script = 
+        - odkomentovat delete user from group script =
+        - odkomentovat delete group script = 
+  => v sekci browser control options
+        - odkomentovat os level = 65
+        - odkomentovat preffered master = yes
+reboot 
+smbpasswd -a root (změna hesla roota)
+smbclient -U root -L localhost
+
+Clientu
+  => ping server 
+  => připojit ke skupině SAMBANET a přihlásit (root;heslo)
+  => restartovat 
+  => ctrl + alt + delete 
+  => možnosti - přihlásit k SAMBANET => změnit poslední řádku (uživatel root + heslo)
+  
+  CENTOS 
+  => přidat uživatele Karel
+     smbpassswd -a Karel 
+     
+ Client 
+ => přihlásit uživatele Karel
