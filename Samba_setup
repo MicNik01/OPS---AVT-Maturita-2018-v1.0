@@ -1,4 +1,4 @@
-Centos
+CENTOS
 vi /etc/sysconfig/network 
 yum install samba -y
 setup -> systémové služby -> povolit nmb a smb
