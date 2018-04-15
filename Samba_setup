@@ -6,7 +6,7 @@ vi /etc/samba/smb.conf
   => v sekci network related options
         - workgroup = SAMBA
         - odkomentovat interfaces = lo eth
-        - odkomentovat hosts allow = 127. 172.16.8.
+        - odkomentovat hosts allow = 127.(loopback) <ip adresa v daném rozsahu> (např. 172.16.8.)
   => v sekci standalone server options 
         - zakomentovat security = user 
         - zakomentovat passdb backend = tdbsam
