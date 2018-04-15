@@ -14,6 +14,8 @@ Max kernel policy version:  22
 
 Permanentí zakázání selinuxu
 
+-> vi /etc/sysconfig/selinux
+
 #This file controls the state of SELinux on the system.
 #SELINUX= can take one of these three values. 
 #   enforcing - SELinux security policy is enforced. 
