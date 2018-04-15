@@ -28,7 +28,7 @@ reboot
 smbpasswd -a root (změna hesla roota)
 smbclient -U root -L localhost
 
-Clientu
+Client
   => ping server 
   => připojit ke skupině SAMBANET a přihlásit (root;heslo)
   => restartovat 
