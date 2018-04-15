@@ -30,5 +30,7 @@ SELINUXTYPE=targeted
 
 -> kontrola:
 [bash ~]$ sestatus 
-SELInux status:             disabled
+SELinux status:             disabled
 [bash ~]$
+
+Pokude je SELinux stále zapnutý -> reboot PC 
