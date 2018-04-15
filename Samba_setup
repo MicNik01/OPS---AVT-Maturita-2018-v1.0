@@ -2,7 +2,7 @@ Centos
 vi /etc/sysconfig/network 
 yum install samba -y
 setup -> systémové služby -> povolit nmb a smb
-ve /etc/samba/smb.conf
+vi /etc/samba/smb.conf
   => v sekci network related options
         - workgroup = SAMBA
         - odkomentovat interfaces = lo eth
